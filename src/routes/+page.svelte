@@ -1,6 +1,7 @@
 
 <script lang="ts">
-  export let data;
+      /** @type {import('./$types').PageData} */
+  export let data:any = {};
   
   </script>
 <form method="POST" enctype="multipart/form-data" action="?/postIt">
@@ -30,7 +31,9 @@
       <button type="submit">Submit</button>
     </div> 
   </form>
-
+<form method="POST" action="?/deleteIt">
+<button type="submit">RESET</button>
+</form>
   <div>
     <h1>POSTS</h1>
     {#each data.posts as post}

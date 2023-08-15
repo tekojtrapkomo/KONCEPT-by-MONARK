@@ -43,5 +43,15 @@ export const actions = {
       } finally {
         await disconnect(); // Disconnect the client after using it
       }
+    },
+
+    deleteIt: async ({ request }) => {
+        await connect();
+        if (!client) {
+            throw new Error("'client' is null");
+          }
+        const db = client.db("test");
+        const collection = db.collection("submissions");
+        await collection.deleteMany();
     }
   };
