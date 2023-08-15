@@ -1,7 +1,6 @@
 
 <script lang="ts">
-      /** @type {import('./$types').PageData} */
-  export let data:any = {};
+  export let data;
   
   </script>
 <form method="POST" enctype="multipart/form-data" action="?/postIt">

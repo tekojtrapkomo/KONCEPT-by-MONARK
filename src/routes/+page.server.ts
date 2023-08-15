@@ -45,7 +45,7 @@ export const actions = {
       }
     },
 
-    deleteIt: async ({ request }) => {
+    deleteIt: async () => {
         await connect();
         if (!client) {
             throw new Error("'client' is null");
